@@ -6,8 +6,13 @@ an angular app. Make sure to style your app using some css. As a bonus make
 your app capable of changing the cow image to something else.
 
 # Rubric
-gulpfile: 2pts
-webpack: 2pts
-angular: 2pts
-server: 2pts
-cows: 2pts
+App requirements: 6pts
+ - gulpfile
+ - webpack
+ - angular
+ - server
+ - cows
+
+Code style: 3pts
+
+Git usage: 1pt
