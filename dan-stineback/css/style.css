@@ -1,0 +1,21 @@
+body {
+  background-color: #B9FFD8;
+}
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+pre {
+  background-color: #E5FBFF;
+  border: 1px solid #898989;
+  padding: 5px;
+}
+input {
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+}

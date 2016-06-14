@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cowsay</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body ng-app="firstCow">
+    <h1>Fun With Cowsay</h1>
+    <div>
+      <pre ng-hide="checked">
+        <h2>This is what a dragon says:</h2>
+          <p>"{{sayWhat}}"</p>
+      _______        \
+ -------              \
+                       \                    ^    /^
+                        \                  / \  // \
+                         \   |\___/|      /   \//  .\
+                          \  /O  O  \__  /    //  | \ \           *----*
+                            /     /  \/_/    //   |  \  \          \   |
+                            @___@`    \/_   //    |   \   \         \/\ \
+                           0/0/|       \/_ //     |    \    \         \  \
+                       0/0/0/0/|        \///      |     \     \       |  |
+                    0/0/0/0/0/_|_ /   (  //       |      \     _\     |  /
+                 0/0/0/0/0/0/`/,_ _ _/  ) ; -.    |    _ _\.-~       /   /
+                             ,-}        _      *-.|.-~-.           .~    ~
+            \     \__/        `/\      /                 ~-. _ .-~      /
+             \____(oo)           *.   }            {                   /
+             (    (--)          .----~-.\        \-`                 .~
+             //__\\  \__ Ack!   ///.----..<        \             _ -~
+            //    \\               ///-._ _ _ _ _ _ _{^ - - - - ~
+        </pre>
+        <pre ng-show="checked">
+          <h2>This is what a Ghost says:</h2>
+            <p>"{{sayWhat}}"</p>
+                      \
+                       \
+                        \          __---__
+                                _-       /--______
+                           __--( /     \ )XXXXXXXXXXX\v.
+                         .-XXX(   O   O  )XXXXXXXXXXXXXXX-
+                        /XXX(       U     )        XXXXXXX\
+                      /XXXXX(              )--_  XXXXXXXXXXX\
+                     /XXXXX/ (      O     )   XXXXXX   \XXXXX\
+                     XXXXX/   /            XXXXXX   \__ \XXXXX
+                     XXXXXX__/          XXXXXX         \__---->
+             ---___  XXX__/          XXXXXX      \__         /
+               \-  --__/   ___/\  XXXXXX            /  ___--/=
+                \-\    ___/    XXXXXX              '--- XXXXXX
+                   \-\/XXX\ XXXXXX                      /XXXXX
+                     \XXXXXXXXX   \                    /XXXXX/
+                      \XXXXXX      >                 _/XXXXX/
+                        \XXXXX--__/              __-- XXXX/
+                         -XXXXXXXX---------------  XXXXXX-
+                            \XXXXXXXXXXXXXXXXXXXXXXXXXX/
+                              ""VXXXXXXXXXXXXXXXXXXV""
+        </pre>
+    </div>
+    <input type="text" ng-model="sayWhat" placeholder="What does it say?">
+    <input type="checkbox" ng-model="checked">I ain't afraid of no Ghost
+    <script src="bundle.js"></script>
+  </body>
+</html>
