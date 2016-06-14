@@ -5,11 +5,12 @@ const clean = require('gulp-clean');
 
 const paths = {
   js: __dirname + '/app/client.js',
-  html: __dirname + '/app/index.html'
+  html: __dirname + '/app/index.html',
+  css: __dirname + '/app/style.css'
 };
 
 gulp.task('copy', () => {
-  gulp.src(paths.html)
+  gulp.src([paths.html, paths.css])
     .pipe(gulp.dest('./build'));
 });
 

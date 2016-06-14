@@ -46,9 +46,8 @@
 
 	'use strict'
 	const angular = __webpack_require__(1);
-	const app = angular.module('FirstApp', []);
 
-	console.log("test");
+	const app = angular.module('FirstApp', []);
 
 
 /***/ },
