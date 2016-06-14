@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
+const clean = require('gulp-clean');
 
 const paths = {
   js: __dirname + '/app/script.js',
@@ -22,5 +23,11 @@ gulp.task('bundle', ()=> {
   .pipe(gulp.dest('./build'));
 });
 
-gulp.task('build', ['copy','bundle']);
-gulp.watch([paths.js, paths.html, paths.css], 'build');
+gulp.task('clean',()=>{
+  gulp.src('./build/*',{read:false})
+  .pipe(clean());
+});
+
+gulp.task('build', ['clean','copy','bundle']);
+gulp.task('default', ['build']);
+gulp.watch([paths.js, paths.html, paths.css], ['build']);

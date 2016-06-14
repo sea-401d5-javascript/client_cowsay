@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cowsay</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" media="screen" title="Cowsay CSS" charset="utf-8">
+  <body ng-app="Cowsay">
+    <h1>Cowsay!</h1>
+    <h2>{{cowsay}}</h2>
+    <pre>
+             \   ^__^
+              \  (oo)\_______
+                 (__)\       )\/\
+                     ||----w |
+                     ||     ||
+    </pre>
+
+    <p>Make the cow say:</p>
+
+    <div class="">
+      <input type="text" ng-model="cowsay" placeholder="moo"/>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="./bundle.js" charset="utf-8"></script>
+  </body>
+</html>
