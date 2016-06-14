@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <main ng-app="CowSay">
+      <h1 ng-if='showResult'>Result: {{firstNum + secondNum}}</h1>
+      <input type="number" ng-model="firstNum" placeholder="1st number"/>
+      <input type='number' ng-model='secondNum' placeholder='2nd number'/>
+      <button ng-click='showResult = !showResult')>Show Result</button>
+    </main>
+    <pre>
+      ______
+    
+      ------
+             \   ^__^
+              \  (oo)\_______
+                 (__)\       )\/\
+                     ||----w |
+                     ||     ||
+    </pre>
+    <script src='./bundle.js'></script>
+  </body>
+</html>
