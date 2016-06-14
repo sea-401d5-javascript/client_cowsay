@@ -34,4 +34,8 @@ gulp.task('bundle', () => {
     .pipe(gulp.dest('./build'));
 });
 
+gulp.task('watch', () => {
+  gulp.watch('./app/*', ['build']);
+});
+
 gulp.task('build', ['clean','copy','copyTwo','bundle' ]);
