@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body ng-app="FirstApp">
     <div>
       <h1>This is what the flaming sheep says:</h1>
       <pre>
         <p>"{{cowSays}}"</p>
+        <div class="flamer">
         \            .    .     .
  \      .  . .     `  ,
   \    .; .  : .' :  :  : .
@@ -19,6 +21,7 @@
               (@@@@@@@@)
               `YY~~~~YY'
                ||    ||
+        </div>
       </pre>
     </div>
     <input type="text" ng-model="cowSays" placeholder="what the flaming sheep says">
