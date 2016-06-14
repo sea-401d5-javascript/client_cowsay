@@ -6,14 +6,10 @@
   </head>
   <body>
     <main ng-app="CowSay">
-      <h1 ng-if='showResult'>Result: {{firstNum + secondNum}}</h1>
-      <input type="number" ng-model="firstNum" placeholder="1st number"/>
-      <input type='number' ng-model='secondNum' placeholder='2nd number'/>
-      <button ng-click='showResult = !showResult')>Show Result</button>
-    </main>
+      <input type="text" ng-model="cowSay" placeholder="type here"/>
     <pre>
       ______
-    
+    <h1>{{cowSay}}</h1>
       ------
              \   ^__^
               \  (oo)\_______
@@ -21,6 +17,7 @@
                      ||----w |
                      ||     ||
     </pre>
+  </main>
     <script src='./bundle.js'></script>
   </body>
 </html>
