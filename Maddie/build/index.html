@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CowSay</title>
+    <link rel="stylesheet" href="cowsay.css">
+  </head>
+  <body ng-app="CowSay">
+    <pre ng-if="!showDragon">
+      <h2>{{whatSay}}</h2>
+        \
+          \
+            ^__^
+            (==)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+    </pre>
+    <pre id="dragon" ng-if="showDragon">
+      <h2> {{whatSay}}</h2>
+              / \  //\
+\\___/|      /   \//  \\
+/0  0  \__  /    //  | \ \
+/     /  \/_/    //   |  \  \
+@_^_@'/   \/_   //    |   \   \
+//_^_/     \/_ //     |    \    \
+( //) |        \///      |     \     \
+( / /) _|_ /   )  //       |      \     _\
+( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
+(( / / )) ,-{        _      `-.|.-~-.           .~         `.
+(( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \
+(( /// ))      `.   {            }                   /      \  \
+(( / ))     .----~-.\        \-'          .~         \  `. \^-.
+///.----..>        \             _ -~             `.  ^-`  ^-_
+///-._ _ _ _ _ _ _}^ - - - - ~          ~-- ,.-~
+                                                          /.-~
+</pre>
+    <input type="text" ng-model="whatSay" placeholder="What Say You?"/>
+    <button ng-click="showDragon = !showDragon"> CHANGE THE PICTURE </button>
+    <script src="bundle.js"></script>
+  </body>
+</html>
