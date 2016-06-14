@@ -7,10 +7,15 @@
   </head>
   <body ng-app="FirstApp">
     <div>
-      <h1>This is what the flaming sheep says:</h1>
+      <h1 ng-hide="showme4">Pick your cowsay pic!</h1>
+      <h1 ng-show="showme">This is what the flaming sheep says:</h1>
+      <h1 ng-show="showme2">This is what the stimpy says:</h1>
+      <p ng-show="showme3">"{{cowSays}}"</p>
       <pre>
-        <p>"{{cowSays}}"</p>
-        <div class="flamer">
+        <p ng-hide="showme"></p>
+
+        <div>
+          <pre class="flamer" ng-show="showme">
         \            .    .     .
  \      .  . .     `  ,
   \    .; .  : .' :  :  : .
@@ -21,10 +26,29 @@
               (@@@@@@@@)
               `YY~~~~YY'
                ||    ||
+          </pre>
+          <pre class="stimpy" ng-show="showme2">
+          \     .    _  .
+           \    |\_|/__/|
+               / / \/ \  \
+              /__|O||O|__ \
+             |/_ \_/\_/ _\ |
+             | | (____) | ||
+             \/\___/\__/  //
+             (_/         ||
+              |          ||
+              |          ||\
+               \        //_/
+                \______//
+               __ || __||
+              (____(____)
+          </pre>
         </div>
       </pre>
     </div>
     <input type="text" ng-model="cowSays" placeholder="what the flaming sheep says">
+    <button ng-click="showme=true; showme2=false; showme3=true; showme4=true">Show Flaming Cow</button>
+    <button ng-click="showme=false; showme2=true; showme3=true; showme4=true">Show Stimpy</button>
     <script src="bundle.js"></script>
   </body>
 </html>
