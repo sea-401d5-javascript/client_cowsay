@@ -5,6 +5,9 @@
   <title>CowSay</title>
 </head>
 <body ng-app="FirstApp">
+  <h1 ng-if="cowsay">{{}}</h1>
+  <input type="text" ng-model="cowsay" placeholder="what does the cowsay"/>
+  <button ng-click="changeCow = !changeCow">Change Cow</button>
   <pre>
   </pre>
   <script src="bundle.js"></script>
