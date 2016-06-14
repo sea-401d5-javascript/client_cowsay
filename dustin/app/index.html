@@ -8,38 +8,92 @@
 
 </head>
 
-<body ng-app="FirstApp" ng-init="cowOne = true">
-<pre>
-  ___
- < {{cowSay}} >
-  ---
-        \
-         \
+<body ng-app="mainApp" ng-init="cowOne = true">
+  <div ng-view></div>
 
- +      o     +              o
-     +             o     +       +
- o          +
-     o  +           +        +
- +        o     o       +        o
- -_-_-_-_-_-_-_,------,      o
- _-_-_-_-_-_-_-|   /\_/\
- -_-_-_-_-_-_-~|__( ^ .^)  +     +
- _-_-_-_-_-_-_-''  ''
- +      o         o   +       o
-     +         +
- o        o         o      o     +
-     o           +
- +      +     o        o      +
+      <input type="text" ng-model="cowSay" placeholder="two way data" />
+      <br />
 
-</pre>
+      <a href="/#/cowsay">Cow</a>
+      <a href="/#/nyancat">Cat</a>
+      <a href="/#/homer">Homer</a>
+      <script src="./bundle.js"></script>
 
+      <script type="text/ng-template" id="cowsay.htm">
+          <pre>
+            _______
+           < {{cowSay}} >
+            -------
+                   \   ^__^
+                    \  (oo)\_______
+                       (__)\       )\/\
+                           ||----w |
+                           ||     ||
 
+          </pre>
+      </script>
 
-            <input type="text" ng-model="cowSay" placeholder="two way data" />
-            <br />
+      <script type="text/ng-template" id="nyancat.htm">
+        <pre>
+          ___
+         < {{cowSay}} >
+          ---
+                \
+                 \
 
-            <button ng-click="cowOne = !cowOne">Show Result</button>
-            <script src="./bundle.js"></script>
+         +      o     +              o
+             +             o     +       +
+         o          +
+             o  +           +        +
+         +        o     o       +        o
+         -_-_-_-_-_-_-_,------,      o
+         _-_-_-_-_-_-_-|   /\_/\
+         -_-_-_-_-_-_-~|__( ^ .^)  +     +
+         _-_-_-_-_-_-_-''  ''
+         +      o         o   +       o
+             +         +
+         o        o         o      o     +
+             o           +
+         +      +     o        o      +
+
+        </pre>
+      </script>
+
+      <script type="text/ng-template" id="homer.htm">
+        <pre>
+      ______
+     < {{cowSay}} >
+      ------
+                 \
+                  \                __
+                        _ ,___,-'",-=-.
+            __,-- _ _,-'_)_  (""`'-._\ `.
+         _,'  __ |,' ,-' __)  ,-     /. |
+       ,'_,--'   |     -'  _)/         `\
+     ,','      ,'       ,-'_,`           :
+     ,'     ,-'       ,(,-(              :
+          ,'       ,-' ,    _            ;
+         /        ,-._/`---'            /
+        /        (____)(----. )       ,'
+       /         (      `.__,     /\ /,
+      :           ;-.___         /__\/|
+      |         ,'      `--.      -,\ |
+      :        /            \    .__/
+       \      (__            \    |_
+        \       ,`-, *       /   _|,\
+         \    ,'   `-.     ,'_,-'    \
+        (_\,-'    ,'\")--,'-'       __\
+         \       /  // ,'|      ,--'  `-.
+          `-.    `-/ \'  |   _,'         `.
+             `-._ /      `--'/             \
+     -hrr-      ,'           |              \
+               /             |               \
+            ,-'              |               /
+           /                 |             -'
+
+         </pre>
+       </script>
+
 </body>
 
 </html>

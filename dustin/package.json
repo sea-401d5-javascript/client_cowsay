@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "angular": "^1.5.6",
-    "express": "^4.13.4"
+    "angular-router": "0.0.2",
+    "express": "^4.13.4",
+    "fs": "0.0.2"
   }
 }
