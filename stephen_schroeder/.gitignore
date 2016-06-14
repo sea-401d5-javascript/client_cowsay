@@ -71,7 +71,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
 ### Vim ###
 # swap
 [._]*.s[a-w][a-z]
@@ -83,3 +82,6 @@ Session.vim
 *~
 # auto-generated tag files
 tags
+
+# build folders
+build/**
