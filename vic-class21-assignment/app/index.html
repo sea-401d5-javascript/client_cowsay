@@ -6,10 +6,10 @@
   <title>CowSay</title>
 </head>
 <body ng-app="FirstApp">
-  <h1 ng-if="showCowSay">{{cowsay}}</h1>
   <input type="text" ng-model="cowsay" placeholder="what does the cowsay"/>
   <button ng-click="showCowSay = !showCowSay">Cow Say</button>
   <button ng-click="changeCow = !changeCow">Change Cow</button>
+  <h1 ng-hide="!showCowSay">{{cowsay}}</h1>
   <pre ng-if="!changeCow">
          \   ^__^
           \  (oo)\_______
@@ -34,7 +34,7 @@
   \\      (__            \\    |_
    \\       ,`-, *       /   _|,\\
     \\    ,'   `-.     ,'_,-'    \\
-   (_\\,-'    ,'\\")--,'-'       __\\ 
+   (_\\,-'    ,'\\")--,'-'       __\\
     \\       /  // ,'|      ,--'  `-.
      `-.    `-/ \\'  |   _,'         `.
         `-._ /      `--'/             \\
