@@ -1,5 +1,6 @@
 'use strict';
 
+const eslint = require('gulp-eslint');
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
 const clean = require('gulp-clean');
@@ -16,14 +17,17 @@ gulp.task('clean-build', () => {
 });
 
 gulp.task('copy', () => {
-  gulp.src(paths.html)
+  gulp.src(paths.html);
   gulp.src(paths.css)
   .pipe(gulp.dest('./build'));
 });
 
-// gulp.task('copyCss', () => {
-//   .pipe(gulp.dest('./build'));
-// });
+gulp.task('lint', () => {
+  return gulp.src(paths.js)
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError());
+});
 
 gulp.task('bundle', () => {
   gulp.src(paths.js)
@@ -35,7 +39,7 @@ gulp.task('bundle', () => {
   .pipe(gulp.dest('./build'));
 });
 
-gulp.task('build', ['clean-build', 'copy', 'bundle']);
+gulp.task('build', ['clean-build', 'lint', 'copy', 'bundle']);
 
 gulp.task('watch', () => {
   gulp.watch(paths, ['clean-build', 'copy', 'bundle', 'build']);
