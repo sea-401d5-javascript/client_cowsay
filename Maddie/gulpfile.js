@@ -31,4 +31,8 @@ gulp.task('bundle', () => {
 
 gulp.task('build', ['copy', 'copyCSS', 'bundle']);
 
-//gulp.watch('./app/client.js', './app/cowsay.css', './app/index.html', ['build']);
+gulp.task('watch', () => {
+  gulp.watch([paths.js, paths.css, paths.html], ['build']);
+});
+
+gulp.task('default', ['watch']);
