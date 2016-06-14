@@ -2,4 +2,4 @@
 
 const angular = require('angular');
 
-const app = angular.module('angularFox', []);
+angular.module('angularFox', []);
