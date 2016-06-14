@@ -9,7 +9,7 @@ var files = ['*.js', './app/*.js'];
 const paths = {
   js:__dirname + '/app/client.js',
   html:__dirname + '/app/index.html',
-  css:__dirname + '/app/cows.css'
+  css:__dirname + '/app/styles/cows.css'
 };
 
 gulp.task('lint', () => {
@@ -18,12 +18,12 @@ gulp.task('lint', () => {
   .pipe(eslint.format());
 });
 
-gulp.task('copy', () => {
+gulp.task('copy:html', () => {
   gulp.src(paths.html)
   .pipe(gulp.dest('./build'));
 });
 
-gulp.task('copy', () => {
+gulp.task('copy:css', () => {
   gulp.src(paths.css)
   .pipe(gulp.dest('./build'));
 });
@@ -38,6 +38,10 @@ gulp.task('bundle', () => {
   .pipe(gulp.dest('./build'));
 });
 
-gulp.task('build', ['copy', 'bundle']);
+gulp.task('build', ['copy:html', 'copy:css', 'bundle']);
 
-gulp.watch(files, ['lint', 'copy', 'build']);
+gulp.task('watch', () => {
+  gulp.watch(paths.js, ['lint', 'bundle']);
+  gulp.watch(paths.html, ['copy:html']);
+  gulp.watch(paths.css, ['copy:css']);
+});

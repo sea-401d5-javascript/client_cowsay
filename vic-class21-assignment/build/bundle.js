@@ -48,7 +48,7 @@
 
 	const angular = __webpack_require__(1);
 
-	const app = angular.module('FirstApp', []);
+	angular.module('FirstApp', []);
 
 
 /***/ },
