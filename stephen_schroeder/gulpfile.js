@@ -17,7 +17,8 @@ gulp.task('clean-build', () => {
 });
 
 gulp.task('copy', () => {
-  gulp.src(paths.html);
+  gulp.src(paths.html)
+  .pipe(gulp.dest('./build'));
   gulp.src(paths.css)
   .pipe(gulp.dest('./build'));
 });
@@ -40,10 +41,6 @@ gulp.task('bundle', () => {
 });
 
 gulp.task('build', ['clean-build', 'lint', 'copy', 'bundle']);
-
-gulp.task('watch', () => {
-  gulp.watch(paths, ['clean-build', 'copy', 'bundle', 'build']);
-});
 
 gulp.task('default', ['clean-build', 'copy', 'bundle', 'build'], () => {
   console.log('REALLY!?!?!? OK!!');
