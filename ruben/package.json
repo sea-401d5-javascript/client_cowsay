@@ -1,0 +1,28 @@
+{
+  "name": "client_cowsay",
+  "version": "1.0.0",
+  "description": "Build a client side cowsay application. This assignment should contain an express static server, a gulp file that can create a webpack bundle, an index that pulls in your bundle and has a cowsay 2-way data binding in an angular app. Make sure to style your app using some css. As a bonus make your app capable of changing the cow image to something else.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubens23/client_cowsay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubens23/client_cowsay/issues"
+  },
+  "homepage": "https://github.com/rubens23/client_cowsay#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "angular": "^1.5.6",
+    "gulp": "^3.9.1",
+    "webpack-stream": "^3.2.0"
+  }
+}
