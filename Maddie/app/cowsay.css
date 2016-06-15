@@ -1,0 +1,24 @@
+pre {
+  background-color: black;
+  color: green;
+  display:block center;
+  width:30%;
+}
+
+#dragon {
+  background-color:black;
+  color:green;
+  display:block center;
+  width:50%;
+}
+
+input {
+  font-size: 1.5em;
+  width: 20%;
+  margin-left:5%;
+}
+
+button {
+  margin-top:.5%;
+  margin-left:5%;
+}
