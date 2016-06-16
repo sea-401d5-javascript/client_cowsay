@@ -32,3 +32,8 @@ pre {
   background-color: grey;
   color: white;
 }
+
+#dragon {
+  text-align: left;
+  font-size: 30px;
+}
