@@ -8,12 +8,11 @@
   <body>
     <main ng-app="FirstApp">
       <h1>What does the Cow say?</h1>
-      <h1 ng-if="showResult"></h1>
-      <input type="text" ng-model="resultOne" placeholder="What should the Dragon say?"/>
-      <button ng-click="showResult = !showResult">Change</button>
+
+      <input type="text" ng-model="message" placeholder="What should the Dragon say?"/>
       <pre ng-hide>
         _____
-        < hey there cow>
+      <h1 id="dragon">{{message}}</h1>
         -----
                       \                    ^    /^
                        \                  / \  // \
