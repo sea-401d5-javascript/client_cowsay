@@ -2,6 +2,7 @@
 # application specific
 db/
 .sass-cache
+build/
 
 # Created by https://www.gitignore.io/api/node,osx,vim
 
