@@ -5,10 +5,10 @@
     <link type="text/css" rel="stylesheet" href="style.css">
   </head>
   <body ng-app="Cowsay">
-    <main ng-controller="CowsayController as cowsayctrl">
-      <pre>{{cowsayctrl.message}}</pre>
-      <input type="text" ng-model="cowsayctrl.message"/>
-      <button ng-click="cowsayctrl.cowTalk(cowsayctrl.message)">Moo</button>
+    <main ng-controller="CowsayController as ctrl">
+      <pre>{{ctrl.cowPic}}</pre>
+      <input type="text" ng-model="ctrl.message"/>
+      <button ng-click="cowsayctrl.cowPic(ctrl.message)">Moo</button>
     </main>
   </body>
   <script src="bundle.js"></script>
