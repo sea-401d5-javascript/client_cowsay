@@ -45,3 +45,5 @@ gulp.task('build', ['clean', 'copy', 'bundle']);
 gulp.task('watch', () => {
   gulp.watch(watchFiles, ['lint', 'clean', 'copy', 'build']);
 });
+
+gulp.task('default', ['build']);
