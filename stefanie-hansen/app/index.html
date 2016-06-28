@@ -4,10 +4,11 @@
     <title>Angular Practice</title>
     <link type="text/css" rel="stylesheet" href="style.css">
   </head>
-  <body ng-app="cowsay">
+  <body ng-app="Cowsay">
     <main ng-controller="CowsayController as cowsayctrl">
       <pre>{{cowsayctrl.message}}</pre>
-      <input type="text" ng-model="cowsayctrl.message" ng-init="cowsayctrl.message = 'moooooo'"/>
+      <input type="text" ng-model="cowsayctrl.message"/>
+      <button ng-click="cowsayctrl.cowTalk(cowsayctrl.message)">Moo</button>
     </main>
   </body>
   <script src="bundle.js"></script>

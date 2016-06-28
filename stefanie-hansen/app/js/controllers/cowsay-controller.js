@@ -1,8 +1,6 @@
 module.exports = function(app) {
-  app.controller('CowsayController', ['CowsayService', function(CowsayService) {
+  app.controller('CowsayController', function(cowsayService) {
     this.message = '';
-    this.cowTalk = function(message) {
-      CowsayService(message);
-    };
-  }]);
+    this.cowPic = cowsayService(this.message);
+  });
 };

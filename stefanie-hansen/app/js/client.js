@@ -1,7 +1,7 @@
 'use strict';
 
 const angular = require('angular');
-const app = angular.module('cowsay', []);
+const app = angular.module('Cowsay', []);
 
-require('./services/cowsay-service')(app);
-require('./controllers/cowsay-controller')(app);
+require('./services')(app);
+require('./controllers')(app);
