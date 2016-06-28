@@ -6,12 +6,12 @@ const del = require('del');
 const eslint = require('gulp-eslint');
 
 const paths = {
-  js: __dirname + '/app/client.js',
+  js: __dirname + '/app/**/*.js',
   html: __dirname + '/app/index.html',
-  css: __dirname + '/app/style.css'
+  css: __dirname + '/app/css/style.css'
 };
 
-const watchFiles = [__dirname + '/app/client.js', __dirname + '/app/index.html', __dirname + '/app/style.css'];
+const watchFiles = [__dirname + '/app/**/*.js', __dirname + '/app/index.html', __dirname + '/app/css/style.css'];
 
 gulp.task('lint', () => {
   gulp.src(paths.js)
